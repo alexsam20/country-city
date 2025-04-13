@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cache</OriginalElement>
+  <nodes>
+    <node x="-581.783606557377" y="269.91557377049185">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.countries</node>
+    <node x="427.93409836065575" y="1349.7663934426232">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.password_reset_tokens</node>
+    <node x="34.08688524590207" y="269.91557377049185">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.subregions</node>
+    <node x="34.08688524590207" y="869.9155737704918">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.regions</node>
+    <node x="2307.127049180328" y="2510.2327868852462">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.migrations</node>
+    <node x="142.58688524590207" y="1349.7663934426232">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cache_locks</node>
+    <node x="-495.78360655737697" y="1359.4319672131146">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.jobs</node>
+    <node x="626.8159016393438" y="869.9155737704918">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.sessions</node>
+    <node x="598.3159016393438" y="269.91557377049185">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.users</node>
+    <node x="-1197.654098360656" y="794.8409836065575">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.states</node>
+    <node x="-1081.154098360656" y="1371.8131147540983">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cache</node>
+    <node x="-144.76032786885162" y="1349.7663934426232">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.failed_jobs</node>
+    <node x="-1197.654098360656" y="269.91557377049185">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cities</node>
+    <node x="-800.6152459016394" y="1349.7663934426232">a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.job_batches</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cities" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.states" relationship="REFERENCES">
+      <point x="103.75" y="-203.5" />
+      <point x="-886.404098360656" y="642.6513836065574" />
+      <point x="-990.154098360656" y="642.6513836065574" />
+      <point x="0.0" y="218.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.subregions" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.regions" relationship="REFERENCES">
+      <point x="0.0" y="-143.5" />
+      <point x="0.0" y="128.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.sessions" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.users" relationship="REFERENCES">
+      <point x="0.0" y="-113.5" />
+      <point x="740.3159016393438" y="2605.634426229508" />
+      <point x="740.3159016393438" y="2605.634426229508" />
+      <point x="0.0" y="143.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.cities" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.countries" relationship="REFERENCES">
+      <point x="-103.75" y="-203.5" />
+      <point x="-1093.904098360656" y="673.0188524590164" />
+      <point x="-1071.2800747540982" y="673.0188524590164" />
+      <point x="-1071.2800747540982" y="543.7554413114755" />
+      <point x="-374.28360655737697" y="543.7554413114755" />
+      <point x="0.0" y="428.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.countries" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.subregions" relationship="REFERENCES">
+      <point x="103.75" y="-428.5" />
+      <point x="-270.53360655737697" y="441.98114754098356" />
+      <point x="241.58688524590207" y="441.98114754098356" />
+      <point x="0.0" y="143.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.states" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.countries" relationship="REFERENCES">
+      <point x="0.0" y="-218.5" />
+      <point x="-990.154098360656" y="981.9098360655737" />
+      <point x="-374.28360655737697" y="981.9098360655737" />
+      <point x="0.0" y="428.5" />
+    </edge>
+    <edge source="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.countries" target="a89db29c-497a-46da-a21c-740c8f98fc3c.TABLE:geographic.regions" relationship="REFERENCES">
+      <point x="-103.75" y="-428.5" />
+      <point x="-478.03360655737697" y="940.0" />
+      <point x="241.58688524590207" y="940.0" />
+      <point x="0.0" y="128.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.3937516137361219" showDependencies="false" x="-166.47331672131122" y="805.1904000000003" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

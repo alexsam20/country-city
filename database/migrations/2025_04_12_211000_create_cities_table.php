@@ -15,11 +15,11 @@ return new class extends Migration
             $table->mediumInteger('id', true)->unsigned();
             $table->string('name', 255);
             $table->unsignedMediumInteger('state_id');
-            $table->char('state_code',5);
+            $table->char('state_code', 5);
             $table->unsignedMediumInteger('country_id');
-            $table->char('country_code',2);
-            $table->decimal('latitude',10,8);
-            $table->decimal('longitude',11,8);
+            $table->char('country_code', 2);
+            $table->decimal('latitude', 10, 8);
+            $table->decimal('longitude', 11, 8);
             $table->timestamps();
             $table->tinyInteger('flag')->default(1);
             $table->string('wikiDataId', 10)->nullable()->comment('Rapid API GeoDB Cities');

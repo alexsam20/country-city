@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         \DB::unprepared(
-            file_get_contents(__DIR__ . '/county-city_backup.sql')
+            file_get_contents(__DIR__.'/county-city_backup.sql')
         );
     }
 }

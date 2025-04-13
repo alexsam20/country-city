@@ -15,12 +15,12 @@ return new class extends Migration
             $table->mediumInteger('id', true)->unsigned();
             $table->string('name', 100);
             $table->unsignedMediumInteger('country_id');
-            $table->char('country_code',2);
-            $table->string('fips_code',30)->nullable();
-            $table->string('iso2',30)->nullable();
-            $table->string('type',191)->nullable();
-            $table->decimal('latitude',10,8)->nullable();
-            $table->decimal('longitude',11,8)->nullable();
+            $table->char('country_code', 2);
+            $table->string('fips_code', 30)->nullable();
+            $table->string('iso2', 30)->nullable();
+            $table->string('type', 191)->nullable();
+            $table->decimal('latitude', 10, 8)->nullable();
+            $table->decimal('longitude', 11, 8)->nullable();
             $table->timestamps();
             $table->tinyInteger('flag')->default(1);
             $table->string('wikiDataId', 10)->nullable()->comment('Rapid API GeoDB Cities');
