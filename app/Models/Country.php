@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Country extends Model
 {
@@ -37,4 +39,26 @@ class Country extends Model
         'flag',
         'wikiDataId',
     ];
+
+    public function region(): BelongsTo
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+    public function subregion(): BelongsTo
+    {
+        return $this->belongsTo(Subregion::class);
+    }
+
+    public function cities(): HasMany
+    {
+        return $this->hasMany(City::class);
+    }
+
+    public function states()
+    {
+        return $this->hasMany(State::class);
+    }
+
+
 }
