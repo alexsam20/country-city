@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\RegionResource\Pages;
-use App\Filament\Resources\RegionResource\RelationManagers;
-use App\Models\Region;
+use App\Filament\Resources\SubregionResource\Pages;
+use App\Filament\Resources\SubregionResource\RelationManagers;
+use App\Models\Subregion;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class RegionResource extends Resource
+class SubregionResource extends Resource
 {
-    protected static ?string $model = Region::class;
+    protected static ?string $model = Subregion::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -25,9 +25,12 @@ class RegionResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(10),
+                    ->maxLength(30),
                 Forms\Components\Textarea::make('translations')
                     ->columnSpanFull(),
+                Forms\Components\Select::make('region_id')
+                    ->relationship('region', 'name')
+                    ->required(),
                 Forms\Components\TextInput::make('flag')
                     ->required()
                     ->numeric()
@@ -43,6 +46,9 @@ class RegionResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('region.name')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -80,9 +86,9 @@ class RegionResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRegions::route('/'),
-            'create' => Pages\CreateRegion::route('/create'),
-            'edit' => Pages\EditRegion::route('/{record}/edit'),
+            'index' => Pages\ListSubregions::route('/'),
+            'create' => Pages\CreateSubregion::route('/create'),
+            'edit' => Pages\EditSubregion::route('/{record}/edit'),
         ];
     }
 }
